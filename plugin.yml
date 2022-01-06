@@ -1,1 +1,10 @@
+name: Ping
+main: Dready/Main
+author: Dready
+api: 3.0.0
+version: 1.0.0
 
+commands:
+  ping:
+    description: "Show your or another player's ping"
+    usage: "Usage: /ping <player>"
