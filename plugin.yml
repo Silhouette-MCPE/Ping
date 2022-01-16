@@ -1,0 +1,16 @@
+name: Ping
+main: DreadyCodr\Ping\Main
+authors: ["Dready", "BestCodrEver"]
+api: 4.0.0
+version: 1.1.0
+
+commands:
+  ping:
+    description: "Show your or another player's ping"
+    usage: "Usage: /ping <player>"
+    permission: "dreadycodr.ping"
+
+permissions:
+  dreadycodr.ping:
+    description: "Allows a player to use /ping"
+    default: true
