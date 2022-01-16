@@ -25,15 +25,16 @@ class Main extends PluginBase implements Listener {
 					$sender->sendMessage($pingMsg);
 				}
 			} else {
-				foreach ($this->getServer()->getOnlinePlayers() as $player){
-					if ($player->getDisplayName() === $args[0]){
+						$player = $this->getServer()->getPlayerByPrefix($args[0]);
+				if($player instanceof Player) {
 						$ping = $player->getNetworkSession()->getPing();
 						$name = $player->getName();
 						$pingMsg = "§6" . $name . "§e's Ping: §f" . $ping . "§ems";
 						$sender->sendMessage($pingMsg);
 						return true;
-					}
 				}
+					
+				
 				$sender->sendMessage("§cPlayer is not online!");
 			}
 			break;
